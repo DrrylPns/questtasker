@@ -39,7 +39,7 @@ export const FormPopover = ({
         onSuccess: (data) => {
             toast.success("Board created!")
             closeRef.current?.click()
-        router.push(`/board/${data.id}`)
+            router.push(`/board/${data.id}`)
         },
         onError: (error) => {
             toast.error(error)
@@ -93,7 +93,7 @@ export const FormPopover = ({
                     </div>
 
                     <div>
-                        <FormSubmit classname="w-full">
+                        <FormSubmit className="w-full">
                             Create
                         </FormSubmit>
                     </div>
