@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   //TODO LAGYAN NG LOGO KAPAG MERON NA
   icons: [
     {
-      url: "/logo.svg",
-      href: "/logo.svg",
+      url: "/favicon.svg",
+      href: "/favicon.svg",
     }
   ]
 }

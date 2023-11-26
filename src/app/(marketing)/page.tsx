@@ -5,6 +5,10 @@ import React from 'react'
 import localFont from "next/font/local"
 import { cn } from '@/lib/utils'
 import { Poppins } from 'next/font/google'
+import Image from 'next/image'
+import { Offer } from './_components/Offer'
+import { Pricings } from './_components/Pricings'
+import { InformationSection } from './_components/InformationSection'
 
 const headingFont = localFont({
     src: "../../../public/fonts/font.woff2"
@@ -26,22 +30,32 @@ const textFont = Poppins({
 })
 
 const MarketingPage = () => {
-  return (
-    <div className='flex items-center justify-center flex-col'>
-        <div className={cn('flex items-center justify-center flex-col',
-            headingFont.className
-        )}>
-            <div className='mb-4 flex items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase'>
-                <Medal className='h-6 w-6 mr-2' />
-                No 1 task management
+    return (
+        <div className='flex items-center justify-center flex-col'>
+            <div className={cn('flex items-center justify-center flex-col',
+                headingFont.className
+            )}>
+                <div className='mb-4 flex items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase'>
+                    <Medal className='h-6 w-6 mr-2' />
+                    No 1 task management
+                </div>
+                <h1 className='text-3xl md:text-6xl text-center text-neutral-800 mb-6'>
+                    Embark on your tasks like never before, turning challenges into conquests
+                </h1>
+                <div className='text-3xl md:text-6xl bg-gradient-to-r from-zinc-800 to-zinc-500 text-white px-4 p-2 rounded-md w-fit'>
+                    with QuestTasker.
+                </div>
             </div>
-            <h1 className='text-3xl md:text-6xl text-center text-neutral-800 mb-6'>
-                Embark on your tasks like never before, turning challenges into conquests 
-            </h1>
-            <div className='text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white px-4 p-2 rounded-md w-fit'>
-                with QuestTasker.
+
+            <div className='aspect-video'>
+                <Image
+                    src="/landing.svg"
+                    alt='landing icon'
+                    className=''
+                    width={300}
+                    height={300}
+                />
             </div>
-        </div>
 
             <div className={cn('text-sm md:-text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto',
                 textFont.className,
@@ -53,6 +67,14 @@ const MarketingPage = () => {
                     Get QuestTaskmaster for free
                 </Link>
             </Button>
+
+            <InformationSection />
+
+
+            <Offer />
+
+
+            <Pricings />
         </div>
     )
 }
