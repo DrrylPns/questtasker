@@ -46,7 +46,7 @@ const MarketingPage = () => {
         <div className={cn('text-sm md:-text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto',
             textFont.className,
         )}>
-            QuestTasker: More than a tool—it's your productivity companion. Conquer tasks, turn challenges into triumphs, and embark on a journey to project success like never before!
+            QuestTasker: More than a tool—it&apos;s your productivity companion. Conquer tasks, turn challenges into triumphs, and embark on a journey to project success like never before!
         </div>
         <Button className='mt-6' size="lg" asChild>
             <Link href="/sign-up">
